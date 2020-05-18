@@ -30,8 +30,8 @@ def callback_up(channel):
         lasttime=now
     
  
-GPIO.setmode(GPIO.BCM) #using this wiring mode from library
-SEN = 23  #channel identifier
+GPIO.setmode(GPIO.BOARD) #using this wiring mode from library
+SEN = 21  #channel identifier
 GPIO.setup(SEN, GPIO.IN) #setup channel into input mode
 try:
     GPIO.add_event_detect(SEN, GPIO.RISING, callback=callback_up)
