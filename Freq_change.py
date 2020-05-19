@@ -8,7 +8,7 @@ spi_channel = 0
 #Enable SPI
 spi = spidev.SpiDev(0, spi_channel)
 spi.open(0,0)
-spi.max_speed_hz = 50000
+spi.max_speed_hz = 100000
 
 # Hardware SPI configuration (wiring explained in README file):
 #SPI_PORT   = 0
@@ -26,10 +26,10 @@ def callback_up(channel):
     global lastfreq
     global counter
     counter = counter + 1
-    if counter %1000 == 0:
+    if counter %100 == 0:
         now = time.time() #system time at the moment
         gap=now-lasttime  #print the difference
-        frequency = 1000.0/gap
+        frequency = 100.0/gap
         print(frequency - lastfreq)
         #frequency_change=1.0/gap
         #print(frequency_change)
