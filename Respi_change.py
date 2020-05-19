@@ -24,11 +24,11 @@ def callback_up(channel):
     global lasttime
     global counter
     counter = counter + 1
-    if counter %1000 == 0:
+    if counter %10000 == 0:
         now = time.time() #system time at the moment
         gap=now-lasttime  #print the difference
         #print(gap)
-        frequency=1000.0/gap
+        frequency=10000.0/gap
         print(frequency)
         lasttime=now
         counter=0
