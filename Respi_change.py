@@ -24,7 +24,7 @@ def callback_up(channel):
     global lasttime
     global counter
     counter = counter + 1
-    if counter %10 == 0:
+    if counter %150 == 0:
         now = time.time() #system time at the moment
         gap=now-lasttime  #print the difference
         #print(gap)
