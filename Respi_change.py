@@ -37,7 +37,7 @@ GPIO.setmode(GPIO.BOARD) #using this wiring mode from library
 SEN = 21  #channel identifier
 GPIO.setup(SEN, GPIO.IN) #setup channel into input mode
 try:
-    GPIO.add_event_detect(SEN, GPIO.RISING, callback=callback_up, bouncetime=0.05)
+    GPIO.add_event_detect(SEN, GPIO.RISING, callback=callback_up)
     while 1:
         time.sleep(1)
 except KeyboardInterrupt:
