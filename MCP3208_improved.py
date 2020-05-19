@@ -30,7 +30,7 @@ def ConvertVolts(data):
 while True:
  
   # Read the voltage data
-  output_volts = ConvertVolts(volts)
+  output_volts = ConvertVolts(data)
  
   # Print out results
   print("The voltage of the channel is: {} ({}V)".format(output_volts))
