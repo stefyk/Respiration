@@ -11,8 +11,8 @@ spi.open(0,0)
 spi.max_speed_hz = 50000
 
 # Hardware SPI configuration (wiring explained in README file):
-SPI_PORT   = 0
-SPI_DEVICE = 0
+#SPI_PORT   = 0
+#SPI_DEVICE = 0
 
 #checks whether the GPIO output is detecting rising edge
 #measures the time between two rising edge
