@@ -23,6 +23,7 @@ lastfreq = 0
 
 def callback_up(channel):
     global lasttime
+    global lastfreq
     global counter
     counter = counter + 1
     if counter %1000 == 0:
