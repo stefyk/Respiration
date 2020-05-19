@@ -22,9 +22,9 @@ def read_adc(channel, Vref = 3.3):
         
  #adc = spi.xfer2([6+((4&channel)>>2),(3&channel)<<6,0])
  #data = ((adc[1]&15) << 8) + adc[2]
- adc = spi.xfer2([1,(8+channel)<<4,0])
- data = ((adc[1]&3) << 8) + adc[2]
- return data
+ 	adc = spi.xfer2([1,(8+channel)<<4,0])
+ 	data = ((adc[1]&3) << 8) + adc[2]
+ 	return data
  
  def Volts(data):
   volts = (data * 3.3) / float(4095)
