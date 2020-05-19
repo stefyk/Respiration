@@ -27,9 +27,9 @@ def read_adc(channel, Vref = 3.3):
     return data
  
  def Volts(data):
-  volts = (data * 3.3) / float(4095)
-  volts = round(volts, 2) # Round off to 2 decimal places
-  return volts
+ 	volts = (data * 3.3) / float(4095)
+ 	volts = round(volts, 2) # Round off to 2 decimal places
+ 	return volts
   
 		
 while True:
