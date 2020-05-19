@@ -20,16 +20,16 @@ SPI_DEVICE = 0
 lasttime=0
  
 def callback_up(channel):
-    sleep(0.005)
+    sleep(0.000005)
     global lasttime
     if lasttime==0:
         lasttime=time.time() #system time saved in lasttime
     else:
         now = time.time() #system time at the moment
         gap=now-lasttime  #print the difference
-	#print(gap)
-        frequency_change=1.0/gap
-        print(frequency_change)
+	print(gap)
+        #frequency_change=1.0/gap
+        #print(frequency_change)
         lasttime=now
     
  
