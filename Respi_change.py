@@ -28,7 +28,7 @@ def callback_up(channel):
         now = time.time() #system time at the moment
         gap=now-lasttime  #print the difference
         #print(gap)
-        frequency=1.0/gap
+        frequency=1000.0/gap
         print(frequency)
         lasttime=now
         counter=0
