@@ -22,18 +22,18 @@ def read_adc(adc_channel, Vref = 3.3):
 	data = ((adc[1]&15) << 8) + adc[2]
 	return data
 
-def ConvertVolts(data,2):
+def ConvertVolts(data):
   volts = (data * 3.3) / float(4096)
-  volts = round(volts,2)
+  volts = round(volts)
   return volts
 
 while True:
  
   # Read the voltage data
-  output_volts = ConvertVolts(volts,2)
+  output_volts = ConvertVolts(volts)
  
   # Print out results
-  print("The voltage of the channel is: {} ({}V)".format(output_volts,2))
+  print("The voltage of the channel is: {} ({}V)".format(output_volts))
  
   # Wait before repeating loop
   time.sleep(5)
