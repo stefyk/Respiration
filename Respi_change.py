@@ -18,24 +18,20 @@ SPI_DEVICE = 0
 #measures the time between two rising edge
 
 lasttime=time.time()
-counter=1
+counter=0
  
 def callback_up(channel):
     global lasttime
     global counter
-    #if lasttime==0:
-    #    lasttime=time.time() #system time saved in lasttime
-    #else:
-    if counter %10000 == 0:
+    counter = counter + 1
+    if counter %100000 == 0:
         now = time.time() #system time at the moment
         gap=now-lasttime  #print the difference
         print(gap)
         #frequency_change=1.0/gap
         #print(frequency_change)
         lasttime=now
-	counter=0
-    else:
-        counter = counter + 1
+        counter=0
  
 GPIO.setmode(GPIO.BOARD) #using this wiring mode from library
 SEN = 21  #channel identifier
