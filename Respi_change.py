@@ -18,7 +18,7 @@ SPI_DEVICE = 0
 #measures the time between two rising edge
 
 lasttime=time.time()
-counter=0
+counter=1
  
 def callback_up(channel):
     global lasttime
@@ -26,7 +26,7 @@ def callback_up(channel):
     #if lasttime==0:
     #    lasttime=time.time() #system time saved in lasttime
     #else:
-    if counter %1000000 == 0:
+    if counter %10000 == 0:
         now = time.time() #system time at the moment
         gap=now-lasttime  #print the difference
         print(gap)
