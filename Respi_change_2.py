@@ -34,7 +34,7 @@ try:
     while 1:
         sleep(10)
 finally:
-GPIO.cleanup()
+	GPIO.cleanup()
    # global lasttime
    # if lasttime==0:
    #     lasttime=time.time() #system time saved in lasttime
