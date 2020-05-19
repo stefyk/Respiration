@@ -27,17 +27,14 @@ def read_adc(channel, Vref = 3.3):
  return data
  
  def Volts(data):
-  volts = (data * 3.3) / float(4096)
+  volts = (data * 3.3) / float(4095)
   volts = round(volts, 2) # Round off to 2 decimal places
   return volts
   
-try:			
-	while True:
+		
+while True:
 		# The read_adc function will get the value of the specified channel (0-1).
-		adc_0 = read_adc(0)
+	adc_0 = read_adc(0)
 		# Print the ADC values.
-		print("The amplitude of V from Ch.0 is:", round(volts, 2),"V")
-		time.sleep(0.000025)
-finally:
-	#closing the SPI channel
-	close()
+	print("The amplitude of V from Ch.0 is:", round(volts, 2),"V")
+	time.sleep(0.000025)
