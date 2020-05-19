@@ -2,9 +2,9 @@ import time
 import RPi.GPIO as GPIO
 from time import sleep
 
-GPIO.setmode(GPIO.BOARD) #using this wiring mode from library
+GPIO.setmode(GPIO.BCM) #using this wiring mode from library
 #SEN = 21  #channel identifier
-GPIO.setup(21, GPIO.IN) #setup channel into input mode
+GPIO.setup(7, GPIO.IN) #setup channel into input mode
 
 #spi_channel = 0
 	   
@@ -23,14 +23,14 @@ GPIO.setup(21, GPIO.IN) #setup channel into input mode
 #lasttime=0
  
 def callback_up(channel):
-    if GPIO.input(21):  #if port 21 ==1
+    if GPIO.input(7):  #if port 21 ==1
         print "Rising edge detected!" 
     else:
         print "Falling edge detected!"
         
 
 try:
-    GPIO.add_event_detect(21, GPIO.BOTH, callback=callback_up)
+    GPIO.add_event_detect(7, GPIO.BOTH, callback=callback_up)
     while 1:
         sleep(10)
 finally:
