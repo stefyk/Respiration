@@ -17,11 +17,6 @@ spi.max_speed_hz = 50000
 #checks whether the GPIO output is detecting rising edge
 #measures the time between two rising edge
 
-lasttime=time.time()
-counter=0
-
-def callback_up(channel):
-
 lasttime = time.time()
 counter = 0 
 lastfreq = 0
